@@ -1,37 +1,44 @@
-# Hello World Template
+# Next.js Hello World Template
 
-A simple but structured website template built with Node.js and TypeScript.
+A modern, responsive web application template built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Project Structure
 
 ```
 hello-world-template/
-├── app/                  # Application source code
-│   ├── components/       # UI components
-│   │   └── HelloWorld.ts
-│   ├── hooks/            # Custom React hooks (if using React)
-│   ├── lib/              # Utility functions, API wrappers
-│   ├── services/         # Backend integrations and business logic
-│   ├── styles/           # CSS styles
-│   │   └── main.css
-│   ├── types/            # TypeScript type definitions
-│   └── index.ts          # Main application entry point
-├── pages/                # Page components (for Next.js)
-├── public/               # Public static assets
-│   ├── assets/           # Images, fonts, etc.
-│   ├── styles/           # Public CSS files
-│   │   └── main.css
-│   └── index.html        # Main HTML file
-├── routes/               # Express route definitions
-├── tests/                # Test files
+├── app/                    # Next.js app directory
+│   ├── page.tsx           # Root page (Home)
+│   ├── page1/             # Page 1 route
+│   │   └── page.tsx
+│   ├── page2/             # Page 2 route
+│   │   └── page.tsx
+│   ├── page3/             # Page 3 route
+│   │   └── page.tsx
+│   └── layout.tsx         # Root layout component
+├── components/            # Shared components
+│   └── TopNav.tsx        # Navigation component
+├── types/                # TypeScript type definitions
+├── public/               # Static assets
+├── styles/               # Global styles
+├── tailwind.config.js    # Tailwind CSS configuration
+├── postcss.config.js     # PostCSS configuration
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
-└── README.md             # Project documentation
+└── README.md            # Project documentation
 ```
 
-## Getting Started
+## Features
 
-To get started with this template, follow these steps:
+- **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Navigation**: Persistent top navigation bar with smooth transitions
+- **Page Routing**: Clean URL structure with organized page components
+- **Styling**: Custom Tailwind configuration with extensive customizations for:
+  - Spacing
+  - Animations
+  - Component styling
+  - Responsive design
+
+## Getting Started
 
 1. **Clone the repository**:
    ```bash
@@ -44,62 +51,43 @@ To get started with this template, follow these steps:
    npm install
    ```
 
-3. **Start the development server**:
+3. **Run the development server**:
    ```bash
    npm run dev
    ```
 
 4. **Open in browser**:
-   Open your browser and navigate to http://localhost:3000
+   Navigate to http://localhost:3000
 
 ## Available Scripts
 
-- `npm run dev` - Starts the development server using ts-node
-- `npm run build` - Compiles TypeScript code to JavaScript
-- `npm start` - Runs the compiled JavaScript code
+- `npm run dev` - Starts the Next.js development server
+- `npm run build` - Creates a production build
+- `npm start` - Runs the production server
+- `npm run lint` - Runs ESLint for code quality checks
 
-## Adding Features
+## Project Pages
 
-This template provides a structured foundation for building web applications:
+- **Home** (`/`): Main landing page with a card layout
+- **Page 1** (`/page1`): First content page
+- **Page 2** (`/page2`): Second content page
+- **Page 3** (`/page3`): Third content page
 
-- Add React components in the `app/components` directory
-- Create utility functions in the `app/lib` directory
-- Define TypeScript interfaces in the `app/types` directory
-- Create API services in the `app/services` directory
-- Add styles in the `app/styles` directory
-- Store static assets in the `public/assets` directory
+## Navigation
+
+The application features a persistent top navigation bar (`TopNav` component) that:
+- Provides links to all main pages
+- Includes hover effects for better user experience
+- Maintains consistent styling across all pages
+
+## Styling
+
+The project uses Tailwind CSS with custom configurations for:
+- Custom spacing scales
+- Animation properties
+- Component-specific styling
+- Responsive breakpoints
 
 ## License
 
 ISC
-
-2. **Install dependencies**:
-   ```
-   npm install
-   ```
-
-3. **Build the project**:
-   ```
-   npm run build
-   ```
-
-4. **Run the project**:
-   ```
-   npm start
-   ```
-
-5. **Open your browser** and navigate to `http://localhost:3000` to see the "Hello World" message.
-
-## Files Overview
-
-- **app/components/HelloWorld.ts**: Contains the function to render the "Hello World" message.
-- **app/styles/main.css**: Contains the CSS styles for the website.
-- **app/index.ts**: The entry point of the application that sets up the HTML structure.
-- **public/index.html**: The main HTML file that links to the CSS and JavaScript files.
-- **package.json**: Contains project metadata and scripts for building and running the project.
-- **tsconfig.json**: TypeScript configuration file.
-- **.gitignore**: Specifies files to be ignored by Git.
-
-## License
-
-This project is licensed under the MIT License.
